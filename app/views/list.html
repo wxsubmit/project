@@ -1,0 +1,14 @@
+<div id="box">
+	<h2 ng-model="clas">{{clas}}</h2>
+	<img src="../images/001.jpg" class="oIm_one" />
+	<input type="text" placeholder="请输入您想搜索的内容" class="oTe" />
+	<img src="../images/002.jpg" class="oIm_two" />
+	<div class="oDiv" ng-if="isshow">
+		<img ng-click="jz()" src="../images/004.jpg" class="oImg_four" />
+		<p class="oP">添加一个新的BUG</p>
+	</div>
+	<img src="../images/003.jpg" class="oIm_three" />
+	<ul>
+		<li ng-repeat="t in data" ui-sref="details.abc({id:t.id})">{{t.summary}}</li>
+	</ul>
+</div>

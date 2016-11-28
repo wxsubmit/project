@@ -1,0 +1,26 @@
+<div>
+	<div class="hea">
+		<img src="images/tu9.png" />
+		<span>登陆</span>
+	</div>
+	<div class="logo"><img src="images/photo.png" /></div>
+	<form class="ff" name="myform">
+	<div class="ipt">
+		<div class="iptone"><input type="text" ng-minlength="2" ng-maxlength="5" ng-model="upuser.username" required></div>
+		<div class="ipttwo"><input ng-minlength="6" ng-maxlength="12" type="password" ng-model="upuser.password" required></div>
+	</div>
+	<div class="check">
+		<label>
+			<input type="checkbox"> <p>Check me out</p>
+		</label>
+	</div>
+
+	<div class="form">
+		<input type="button" value="登陆" class="denglu" ng-click="fn()" ng-disabled="myform.$invalid" required>
+	</div>
+	</form>
+	<div class="foot">
+		<div class="footone">注册</div>
+		<div class="fonttwo">忘记密码？</div>
+	</div>
+</div>

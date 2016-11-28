@@ -1,0 +1,94 @@
+*{
+	margin:0;
+	padding:0;
+}
+.skf_tp{
+	width: 16rem;
+	height: 2.125rem;
+	background:#222222;
+	border:0.025px solid #000;;
+}
+.skf_tp img{
+	width: 0.45rem;
+	height: 0.75rem;
+	float:left;
+	margin-top: 0.8rem;
+	margin-left: 1.25rem;
+}
+.list_fl{
+	width: 16rem;
+	height: 1.5rem;
+	float:left;
+}
+.list_fl p{
+	color:#363636;
+	font-size:0.55rem;
+	padding-left: 0.625rem;
+	padding-top: 0.7rem;
+}
+.list_dx{
+	width: 16rem;
+	height: 1.5rem;
+	float:left;
+	font-size:0.55rem;
+	color:#343434;
+}
+.list_dx label{
+	float:left;
+	margin-top: 0.75rem;
+}
+.list_dx input{
+	float:left;
+	width: 0.75rem;
+	height: 0.75rem;
+	margin-left: 0.75rem;
+	margin-right: 0.25rem;
+}
+.list_pl{
+	width: 16rem;
+	height: 1.5rem;
+	float:left;
+	font-size:0.55rem;
+	color:#343434;
+	margin-top: 0.75rem;
+}
+.list_pl label{
+	width: 1.25rem;
+	height: 0.75rem;
+	float:left;
+}
+.list_pl input{
+	float:left;
+	width: 0.75rem;
+	height: 0.75rem;
+	margin-left: 0.75rem;
+	margin-right: 0.25rem;
+}
+.texta{
+	width: 14.5rem;
+	height: 1.5rem;
+	float:left;
+	font-size:0.55rem;
+	color:#343434;
+	margin-left: 0.7rem;
+	margin-top: 0.5rem;
+}
+#time{
+	width: 15rem;
+	height: 1.5rem;
+	float:left;
+	font-size:0.55rem;
+	color:#343434;
+	margin-top: 0.75rem;
+	margin-left: 0.75rem;
+}
+.btn{
+	width: 16rem;
+	height: 2rem;
+	float:left;
+	color:#fff;
+	font-size:1rem;
+	background:aqua;
+	margin-top: 0.75rem;
+	border:none;
+}

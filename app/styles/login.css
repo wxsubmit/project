@@ -1,0 +1,157 @@
+body,
+html {
+	width: 100%;
+	height: 100%;
+	min-width: 320px;
+	background: #2993f9;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+input {
+	border: none;
+	outline: none;
+}
+
+.hea {
+	height: 63px;
+}
+
+.hea>img {
+	width: 16.5px;
+	height: 16.5px;
+	float: left;
+	display: block;
+	margin: 15px 0 0 10px;
+	cursor: pointer;
+}
+
+.hea>span {
+	font-size: 16.5px;
+	color: #fff;
+	float: left;
+	margin: 18px 0 0 30px;
+	cursor: pointer;
+}
+
+.logo {
+	height: 100px;
+	text-align: center;
+}
+
+.logo>img {
+	width: 80px;
+	height: 80px;
+}
+
+.ipt {
+	margin: 0 20px;
+	height: 110px;
+	border-radius: 3px;
+	background: #fff;
+}
+
+.iptone {
+	height: 55px;
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	border-bottom: 1px #ddd solid;
+}
+
+.iptone>input {
+	margin-left: 10px;
+	display: block;
+	-webkit-box-flex: 1;
+	font-size: 12px;
+	height: 11px;
+	line-height: 12px;
+	padding: 21px 0;
+	border-radius: 3px;
+}
+
+.ipttwo {
+	height: 55px;
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+}
+
+.ipttwo>input {
+	margin-left: 10px;
+	-webkit-box-flex: 1;
+	font-size: 12px;
+	height: 13px;
+	padding: 21px 0;
+	border-radius: 3px;
+}
+.check{
+	float: right;
+	color: #fff;
+	font-size: 12px;
+	margin-right: 23px;
+	display: block;
+	margin-top: 10px;
+}
+.check input{
+	display: block;
+	float: left;
+}
+.check p{
+	float: right;
+	text-indent: 5px;
+	margin-top: 5px;
+}
+
+.form{
+	height: 40px;
+	height: 40px;
+	margin-top: 40px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.denglu {
+	background: #5cbffa;
+	text-align: center;
+	color: #fff;
+	width: 100%;
+	display: block;
+	font-size: 16px;
+	line-height: 40px;
+	border-radius: 3px;
+}
+
+.foot {
+	width: 100%;
+	height: 45px;
+	background: #1177cb;
+	margin-top: 240px;
+	position: absolute;
+	bottom: 0;
+	
+	padding: 7.5px 0;
+}
+
+.footone {
+	width: 50%;
+	height: 30px;
+	box-sizing: border-box;
+	border-right: 1px #5cbffa solid;
+	float: left;
+	text-align: center;
+	color: #fff;
+	font-size: 17px;
+	line-height: 30px;
+}
+
+.fonttwo {
+	width: 50%;
+	height: 30px;
+	float: left;
+	text-align: center;
+	color: #fff;
+	font-size: 17px;
+	line-height: 30px;
+}
+
+
+
