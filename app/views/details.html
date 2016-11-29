@@ -1,3 +1,13 @@
 <div id="dd">
-	<p ng-repeat="i in data">{{i.date}}</p>
+	<h2>bug详情</h2>
+	<p ng-mdoel="classify">错误分类：<a ng-class="class">{{classify}}</a></p>
+	<p ng-model="impor">重要性：<a ng-class="im">{{impor}}</a></p>
+	<p contenteditable="true">简介：{{data.summary}}</p>
+	<p contenteditable="true">描述：{{data.description}}</p>
+	<p>日期：{{data.date}}</p>
+	<p>发布人：{{data.from}}</p>
+	<p ng-model="status">错误状态：<a>{{status}}</a></p>
+	<div>
+		<input type="button" name="" ng-click="sa()" id="save" value="保存" />
+	</div>
 </div>

@@ -19,9 +19,9 @@ angular
 	    url:'/list',
 	    templateUrl:"views/list.html",
 	    controller:"listCtrl"
-	}).state('details.abc',{
-	    url:'/abc?id',
-	    templateUrl:"views/abc.html",
+	}).state('details',{
+	    url:'/details/:id',
+	    templateUrl:"views/details.html",
 	    controller:"detailsCtrl"
 	}).state('release',{
 	    url:'/release',

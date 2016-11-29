@@ -6,48 +6,47 @@
 			<p>分类:</p>
 		</div>
 		<form class="list_dx">
-			<label><input name="Fruit" type="radio"/>ui </label>
-			<label><input name="Fruit" type="radio"/>前端 </label>
-			<label><input name="Fruit" type="radio"/>测试 </label>
-			<label><input name="Fruit" type="radio"/>zz</label>
+			<label ng-repeat="x in Sdata" ng-click="Sfn($index)"><input name="Fruit" type="radio"/>{{x}}</label>
 		</form>
 		<div class="list_fl">
 			<p>出现频率:</p>
 		</div>
 		<form class="list_pl">
-			<input name="Fruit" type="radio"/>
-			<label>总是 </label></br>
-			<input name="Fruit" type="radio"/>
-			<label>偶尔 </label></br>
+			
+			<label ng-repeat="x in Sdata2" ng-click="Sfn2($index)"><input name="Fruit" type="radio"/>{{x}}</label>
+			
+			
 		</form>
 		<div class="list_fl">
 			<p>重要性:</p>
 		</div>
 		<form class="list_dx">
-			<label><input name="Fruit" type="radio"/>重要 </label>
-			<label><input name="Fruit" type="radio"/>中等 </label>
-			<label><input name="Fruit" type="radio"/>一般 </label>
+			<label ng-repeat="x in Sdata1" ng-click="Sfn1($index)"><input name="Fruit" type="radio"/>{{x}}</label>
 		</form>
 		<div class="list_fl">
 			<p>简介:</p>
 		</div>
-		<textarea class="texta"></textarea>
+		<textarea class="texta" ng-model="Stext"></textarea>
 		<div class="list_fl">
 			<p>描述:</p>
 		</div>
-		<textarea class="texta"></textarea>
+		<textarea class="texta" ng-model="Stext1"></textarea>
 		<!--<div ng-controller="abc">
     		<div text-angular ng-model="htmlVariable"></div>
     		<p>{{htmlVariable}}</p>
    		</div>-->
-   		<P id="time">afwef</P>
+   		
    		<div class="list_fl">
 			<p>错误的状态:</p>
 		</div>
 		<form class="list_dx">
-			<label><input name="Fruit" type="radio"/>已指派 </label>
-			<label><input name="Fruit" type="radio"/>已解决 </label>
-			<label><input name="Fruit" type="radio"/>已关闭 </label>
+			<label ng-repeat="x in Sdata3" ng-click="Sfn3($index)"><input name="Fruit" type="radio"/>{{x}} </label>
+			
 		</form>
-		<button class="btn">发布</button>
+		<form class="list_dx">
+			<label ng-repeat="x in Sdata4" ng-click="fn($index)" ng-model="x"><input name="Fruit" type="radio"/>{{x}} </label>
+		<div id="show"></div>	
+		</form>
+		
+		<button class="btn" ng-click="pushbug()">发布</button>
 </div>

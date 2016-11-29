@@ -8,3 +8,50 @@
 	background: #2993f9;
 }
 
+.white{
+	color: white;
+}
+.im{
+	color: red;
+}
+.orange{
+	color: orange;
+}
+.blue{
+	color: blue;
+}
+#dd p{
+	line-height: 40px;
+}
+#dd h2{
+	text-align: center;
+	font-size: 1rem;
+}
+
+#dd div{
+	margin-left: 1.5rem;
+	width: 100%;
+	position: fixed;
+	bottom: 1rem;
+	margin-right: 1.5rem;
+}
+#dd div button{
+	display: block;
+	float: left;
+	width: 40%;
+	height: 2rem;
+	color: #fff;
+	border: none;
+	outline: none;
+	margin-right: 0.5rem;
+	background: red;
+}
+#dd div input{
+	display: block;
+	width: 40%;
+	height: 2rem;
+	color: #fff;
+	border: none;
+	outline: none;
+	background: red;
+}

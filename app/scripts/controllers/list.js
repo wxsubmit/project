@@ -21,6 +21,13 @@ angular.module('projectApp').controller("listCtrl", ['$scope', '$state', '$http'
 		if(e.charactor == 3) {
 			$scope.isshow = true;
 			$scope.clas = "测试";
+			$http({
+				url: "http://www.bugcenter.com.cn:1511/item",
+				method: "get"
+			}).success(function(e) {
+				$scope.data = e;
+				console.log(e);
+			});
 			
 			$scope.jz=function (){
 				$state.go('release');
@@ -33,7 +40,19 @@ angular.module('projectApp').controller("listCtrl", ['$scope', '$state', '$http'
 		//window.location.href="views/details.html";
 		$state.go('details');
 	}*/
-	
+	$scope.s=0;
+	$scope.fn=function (e){
+		$scope.s=e;
+		$http({
+			url: "http://www.bugcenter.com.cn:1511/item",
+			method: "get",
+			params: {
+				'to': $rootScope.user.username
+			}
+		}).success(function(e) {
+			$scope.data.push(e);
+		});
+	}
 	
 	
 	$http({
@@ -47,4 +66,14 @@ angular.module('projectApp').controller("listCtrl", ['$scope', '$state', '$http'
 		console.log(e);
 	});
 	
-}])
+	
+	
+}]).filter("f",function (){
+	return function (e,page,size){
+		var  start=page*size
+		var end=(page+1)*size
+		if(e!=undefined){
+			return e.slice(start,end)
+		}
+	}
+})
