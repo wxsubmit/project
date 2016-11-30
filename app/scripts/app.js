@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('projectApp', ['ui.router','chart.js']).config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
+  .module('projectApp', ['ui.router','chart.js','textAngular']).config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
     $urlRouterProvider.when('','/login');
 	$stateProvider.state('login',{
 		url:'/login',

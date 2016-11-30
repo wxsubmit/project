@@ -19,12 +19,14 @@ angular.module('projectApp').controller("detailsCtrl", ['$scope', '$state', '$ht
 		};
 		
 		
+		
 		if(e.status== 0){
 			$scope.status = "已指派";
 		}else if(e.status== 1){
 			$scope.status = "已解决";
 			$("#save").css("display","none");
 		}else if(e.status== 2){
+			alert("此条bug已关闭");
 			$scope.status = "已关闭";
 			$("#save").css("display","none");
 		}
