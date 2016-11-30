@@ -29,13 +29,14 @@ angular.module('projectApp').controller("listCtrl", ['$scope', '$state', '$http'
 				console.log(e);
 			});
 			
-			$scope.jz=function (){
-				$state.go('release');
-			}
+			
 		};
 		console.log(e);
 	});
 	
+	$scope.jz=function (){
+				$state.go('release');
+			}
 	/*$scope.datail=function (){
 		//window.location.href="views/details.html";
 		$state.go('details');
@@ -66,6 +67,13 @@ angular.module('projectApp').controller("listCtrl", ['$scope', '$state', '$http'
 		console.log(e);
 	});
 	
+	/*$http({
+		url: "http://www.bugcenter.com.cn:1511/item",
+		method: "get"
+	}).success(function(e) {
+		$scope.data = e;
+		console.log(e);
+	});*/
 	
 	
 }]).filter("f",function (){

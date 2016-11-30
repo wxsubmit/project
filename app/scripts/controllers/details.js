@@ -4,10 +4,7 @@
 angular.module('projectApp').controller("detailsCtrl", ['$scope', '$state', '$http', '$rootScope','$stateParams', function($scope, $state, $http, $rootScope,$stateParams) {
 	$http({
 		url: "http://www.bugcenter.com.cn:1511/item/"+$stateParams.id,
-		method: "get",
-		params: {
-			'to': $rootScope.user.username
-		}
+		method: "get"
 	}).success(function (e) {
 		$scope.data = e;
 		if(e.importance == 0){
@@ -21,6 +18,7 @@ angular.module('projectApp').controller("detailsCtrl", ['$scope', '$state', '$ht
 			$scope.im="blue";
 		};
 		
+		
 		if(e.status== 0){
 			$scope.status = "已指派";
 		}else if(e.status== 1){
@@ -28,6 +26,7 @@ angular.module('projectApp').controller("detailsCtrl", ['$scope', '$state', '$ht
 			$("#save").css("display","none");
 		}else if(e.status== 2){
 			$scope.status = "已关闭";
+			$("#save").css("display","none");
 		}
 		
 		if(e.classify == 0){
@@ -55,4 +54,5 @@ angular.module('projectApp').controller("detailsCtrl", ['$scope', '$state', '$ht
 			}
 		})
 	}
+
 }])

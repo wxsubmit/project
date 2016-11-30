@@ -1,15 +1,20 @@
 <div id="box">
 	<h2 ng-model="clas">{{clas}}</h2>
-	<img src="../images/001.jpg" class="oIm_one" />
+	<img src="../images/001.jpg" ui-sref="login" class="oIm_one" />
 	<input ng-model="ss" type="text" placeholder="请输入您想搜索的内容" class="oTe" />
-	<img src="../images/002.jpg" class="oIm_two" />
+	<img src="../images/002.jpg" ui-sref="form" class="oIm_two" />
 	<div class="oDiv" ng-if="isshow">
 		<img ng-click="jz()" src="../images/004.jpg" class="oImg_four" />
 		<p class="oP">添加一个新的BUG</p>
 	</div>
-	<img src="../images/003.jpg" class="oIm_three" />
+	
 	<ul>
-		<li ng-repeat="t in data |f:s:5 | filter:{summary:ss}" ui-sref="details({id:t.id})">{{$index+1+"."+t.summary}}</li>
+		<li ng-repeat="t in data |filter:{summary:ss} | f:s:10" ui-sref="details({id:t.id})" class="oLi">
+			<p class="a1">{{t.summary}}</p>
+			<a class="a2" ng-class="{im1:t.importance==0,im2:t.importance==1,im3:t.importance==2}">{{t.importance|impor}}</a>
+			<p class="a3">{{t.date}}</p>
+		</li>
 	</ul>
-	<button ng-click="fn($index)">{{$index+1}}</button>
+	<button ng-click="fn($index)">下一页</button>
+	<img src="../images/003.jpg" class="oIm_three" />
 </div>
