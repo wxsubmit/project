@@ -2,6 +2,19 @@
  * Created by jingguanran on 2016/11/23.
  */
 angular.module('projectApp').controller("listCtrl", ['$scope', '$state', '$http', '$rootScope', function($scope, $state, $http, $rootScope) {
+	
+	$http({
+		url: "http://www.bugcenter.com.cn:1511/item",
+		method: "get",
+		params: {
+			'to': $rootScope.user.username
+		}
+	}).success(function(e) {
+		$scope.data = e;
+		
+		console.log(e)
+	});
+	
 	$http({
 		url: "http://www.bugcenter.com.cn:1511/users/" +$rootScope.user.uid,
 		method: "get"
@@ -32,28 +45,6 @@ angular.module('projectApp').controller("listCtrl", ['$scope', '$state', '$http'
 			
 		};
 		
-		
-	
-	});
-	
-	$scope.jz=function (){
-		$state.go('release');
-	}
-	/*$scope.datail=function (){
-		//window.location.href="views/details.html";
-		$state.go('details');
-	}*/
-	
-	
-	
-	$http({
-		url: "http://www.bugcenter.com.cn:1511/item",
-		method: "get",
-		params: {
-			'to': $rootScope.user.username
-		}
-	}).success(function(e) {
-		$scope.data = e;
 		$scope.num=e.length;
 		
 		
@@ -74,8 +65,20 @@ angular.module('projectApp').controller("listCtrl", ['$scope', '$state', '$http'
 				$scope.s=$scope.pa-1;
 			}
 		}
-		console.log(e)
+	
 	});
+	
+	$scope.jz=function (){
+		$state.go('release');
+	}
+	/*$scope.datail=function (){
+		//window.location.href="views/details.html";
+		$state.go('details');
+	}*/
+	
+	
+	
+	
 	
 	/*$http({
 		url: "http://www.bugcenter.com.cn:1511/item",
