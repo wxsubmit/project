@@ -1,20 +1,23 @@
 <div id="box">
 	<h2 ng-model="clas">{{clas}}</h2>
-	<img src="../images/001.jpg" ui-sref="login" class="oIm_one" />
+	<img src="images/return.jpg" ui-sref="login" class="oIm_one" />
 	<input ng-model="ss" type="text" placeholder="请输入您想搜索的内容" class="oTe" />
-	<img src="../images/002.jpg" ui-sref="form" class="oIm_two" />
+	<img src="images/caidan.jpg" ui-sref="form" class="oIm_two" />
 	<div class="oDiv" ng-if="isshow">
-		<img ng-click="jz()" src="../images/004.jpg" class="oImg_four" />
+		<img ng-click="jz()" src="images/jiahao.jpg" class="oImg_four" />
 		<p class="oP">添加一个新的BUG</p>
 	</div>
 	
 	<ul>
-		<li ng-repeat="t in data |filter:{summary:ss} | f:s:10" ui-sref="details({id:t.id})" class="oLi">
-			<p class="a1">{{t.summary}}</p>
-			<a class="a2" ng-class="{im1:t.importance==0,im2:t.importance==1,im3:t.importance==2}">{{t.importance|impor}}</a>
-			<p class="a3">{{t.date}}</p>
+		<li ng-repeat="t in data |filter:{summary:ss} | f:s:5" ui-sref="details({id:t.id})" class="oLi">
+			<p style="text-indent: 0.5rem;" class="a1">{{t.summary | limitTo:3}}{{t.summary.length>3?'...':''}}</p>
+			<a class="a2" ng-class="{im1:t.importance==0,im2:t.importance==1,im3:t.importance==2}">{{t.importance|impor}}</a>			
+			<p style="text-indent: 0.5rem;" class="a3">日期：{{t.date}}</p>
 		</li>
 	</ul>
-	<button ng-click="fn($index)">下一页</button>
-	<img src="../images/003.jpg" class="oIm_three" />
+	<div style="text-align: center; margin-top: 1rem; margin-bottom: 1rem;">
+		<button class="previous" ng-click="fn()">上一页</button>
+		<button class="next" ng-click="fn2()">下一页</button>
+	</div>
+	<img src="images/foot.jpg" class="oIm_three" />
 </div>

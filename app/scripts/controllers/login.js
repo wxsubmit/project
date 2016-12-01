@@ -6,6 +6,7 @@ angular.module('projectApp').controller("loginCtrl",['$rootScope','$scope','$sta
 		$scope.upuser.username=locals.get("username"," ");
 		//pass.value=locals.get("password","");
 	}*/
+	
   $scope.fn=function(){
   	
 		$http({
@@ -18,7 +19,9 @@ angular.module('projectApp').controller("loginCtrl",['$rootScope','$scope','$sta
 	      $rootScope.user.uid = e.uid;
 	      locals.set("username",$scope.upuser.username);
 	      locals.set("password",$scope.upuser.password);
+	      locals.set("uid",e.id);
 	      $state.go('list');
+	      console.log(e)
 	    })
 	
   }

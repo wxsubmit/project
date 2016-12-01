@@ -31,29 +31,19 @@ angular.module('projectApp').controller("listCtrl", ['$scope', '$state', '$http'
 			
 			
 		};
-		console.log(e);
+		
+		
+	
 	});
 	
 	$scope.jz=function (){
-				$state.go('release');
-			}
+		$state.go('release');
+	}
 	/*$scope.datail=function (){
 		//window.location.href="views/details.html";
 		$state.go('details');
 	}*/
-	$scope.s=0;
-	$scope.fn=function (e){
-		$scope.s=e;
-		$http({
-			url: "http://www.bugcenter.com.cn:1511/item",
-			method: "get",
-			params: {
-				'to': $rootScope.user.username
-			}
-		}).success(function(e) {
-			$scope.data.push(e);
-		});
-	}
+	
 	
 	
 	$http({
@@ -64,7 +54,27 @@ angular.module('projectApp').controller("listCtrl", ['$scope', '$state', '$http'
 		}
 	}).success(function(e) {
 		$scope.data = e;
-		console.log(e);
+		$scope.num=e.length;
+		
+		
+		$scope.s=0;
+		$scope.size=5;
+		$scope.pa=Math.ceil(Number($scope.num) / Number($scope.size));
+		console.log($scope.size)
+		//console.log($scope.pa)
+		$scope.fn=function (){
+			$scope.s--;
+			if($scope.s<0){
+				$scope.s=0;
+			}
+		}
+		$scope.fn2=function (){
+			$scope.s++;
+			if($scope.s>$scope.pa-1){
+				$scope.s=$scope.pa-1;
+			}
+		}
+		console.log(e)
 	});
 	
 	/*$http({

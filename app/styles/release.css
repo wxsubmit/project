@@ -17,14 +17,14 @@
 }
 .list_fl{
 	width: 16rem;
-	height: 1.5rem;
+	height: auto;
 	float:left;
 }
 .list_fl p{
 	color:#363636;
 	font-size:0.55rem;
 	padding-left: 0.625rem;
-	padding-top: 0.7rem;
+	margin-top: 1rem;
 }
 .list_dx{
 	width: 16rem;
@@ -33,16 +33,24 @@
 	font-size:0.55rem;
 	color:#343434;
 }
+
 .list_dx label{
 	float:left;
 	margin-top: 0.75rem;
+	margin-right: 0.35rem;
 }
 .list_dx input{
 	float:left;
 	width: 0.75rem;
 	height: 0.75rem;
+	display: block;
 	margin-left: 0.75rem;
 	margin-right: 0.25rem;
+}
+.list_dx label p{
+	float: left;
+	font-size: 0.5rem;
+	margin-top: 0.35rem;
 }
 .list_pl{
 	width: 16rem;
@@ -53,7 +61,6 @@
 	margin-top: 0.75rem;
 }
 .list_pl label{
-	width: 1.25rem;
 	height: 0.75rem;
 	float:left;
 }
@@ -61,8 +68,13 @@
 	float:left;
 	width: 0.75rem;
 	height: 0.75rem;
+	display: block;
 	margin-left: 0.75rem;
 	margin-right: 0.25rem;
+}
+.list_pl label p{
+	float: left;
+	margin-top: 0.25rem;
 }
 .texta{
 	width: 14.5rem;
@@ -82,7 +94,7 @@
 	margin-top: 0.75rem;
 	margin-left: 0.75rem;
 }
-.btn{
+.btn2{
 	width: 16rem;
 	height: 2rem;
 	float:left;

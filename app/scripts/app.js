@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('projectApp', ['ui.router','chart.js','textAngular']).config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
+  .module('projectApp', ['ui.router','chart.js','summernote']).config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
     $urlRouterProvider.when('','/login');
 	$stateProvider.state('login',{
 		url:'/login',
@@ -42,8 +42,4 @@ angular
 			return "一般"
 		}
 	}
-}).controller("PolarAreaCtrl", function ($scope) {
-  $scope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales", "Tele Sales", "Corporate Sales"];
-  
-  $scope.data = [300, 500, 100, 40, 120,180];
-});
+})

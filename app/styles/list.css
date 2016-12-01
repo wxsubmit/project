@@ -16,6 +16,7 @@ body{
 	margin-top: 0.5rem;
 	color: #fff;
 }
+
 .oIm_one{
 	width: 0.75rem;
 	height: 0.725rem;
@@ -89,6 +90,7 @@ body{
 	position: absolute;
 	bottom: 0;
 }
+
 .im1{
 	width: 3rem;
 	height: 1.5rem;
@@ -106,4 +108,19 @@ body{
 }
 #box button{
 	text-align: center;
+}
+
+.previous{
+	width: 3rem;
+	font-size: 0.5rem;
+	height: 2rem;
+	color: dodgerblue;
+	background: #fff;
+}
+.next{
+	width: 3rem;
+	font-size: 0.5rem;
+	height: 2rem;
+	color: dodgerblue;
+	background: #fff;
 }

@@ -1,5 +1,13 @@
 <div ng-controller="PolarAreaCtrl">
-	<canvas id="polar-area" class="chart chart-polar-area"
-	  chart-data="data" chart-labels="labels" chart-options="options">
-	</canvas>
+	<img class="abc" ui-sref="list" src="images/return.jpg"/>
+	<div id="oDiv" style="position: absolute;top: 1rem;">
+		<a ng-click="oA_one()">角色</a>
+		<a ng-click="oA_two()">重要性</a>
+		<a ng-click="oA_three()">频率</a>
+	</div>
+	<div class="allDiv" style="padding-top: 4rem;">
+		<canvas id="polar-area" class="chart chart-polar-area"
+		  chart-data="data" chart-labels="labels" chart-options="options">
+		</canvas>
+	</div>
 </div>

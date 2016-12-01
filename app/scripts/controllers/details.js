@@ -6,6 +6,7 @@ angular.module('projectApp').controller("detailsCtrl", ['$scope', '$state', '$ht
 		url: "http://www.bugcenter.com.cn:1511/item/"+$stateParams.id,
 		method: "get"
 	}).success(function (e) {
+		console.log(e);
 		$scope.data = e;
 		if(e.importance == 0){
 			$scope.impor="重要";
